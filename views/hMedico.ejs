@@ -1,0 +1,81 @@
+<div class="max-w-md mx-auto bg-white rounded-md p-8 shadow-lg">
+  <form
+    class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md"
+    action="/rHistorialClinico"
+    method="post"
+  >
+    <h1 class="text-2xl font-semibold mb-4">Registro de historial Médico</h1>
+    <div class="mb-4">
+      <label for="pacienteId" class="block font-medium text-gray-700"
+        >Seleccionar Paciente</label
+      >
+      <select
+        id="pacienteId"
+        name="pacienteId"
+        class="form-select mt-1 block w-full"
+        style="background-color: #f0f0f0; color: #000000"
+        required
+      >
+        <option value="" disabled selected>Seleccione un paciente</option>
+        <!-- Aquí se inserta la lista de pacientes -->
+        <% pacientes.forEach((paciente) => { %>
+        <option value="<%= paciente.PacienteID %>">
+          <%= paciente.nombre %> <%= paciente.apellido %>
+        </option>
+        <% }); %>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="fechaRegistro">
+        Fecha de Registro
+      </label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        name="fechaRegistro"
+        name="fechaRegistro"
+        type="datetime-local"
+      />
+    </div>
+    <div class="mb-4">
+      <label
+        class="block text-gray-700 font-bold mb-2"
+        for="enfermedadesPrevias"
+      >
+        Enfermedades Previas
+      </label>
+      <textarea
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        name="enfermedadesPrevias"
+        placeholder="Ingrese las enfermedades previas del paciente"
+      ></textarea>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="alergias">
+        Alergias
+      </label>
+      <textarea
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        name="alergias"
+        placeholder="Ingrese las alergias del paciente"
+      ></textarea>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="otrosDetalles">
+        Otros Detalles
+      </label>
+      <textarea
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        name="otrosDetalles"
+        placeholder="Ingrese otros detalles del paciente"
+      ></textarea>
+    </div>
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit"
+      >
+        Registrar
+      </button>
+    </div>
+  </form>
+</div>

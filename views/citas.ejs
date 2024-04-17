@@ -1,0 +1,77 @@
+<div class="max-w-md mx-auto bg-white rounded-md p-8 shadow-lg">
+  <h1 class="text-2xl font-semibold mb-4">Programar Cita Médica</h1>
+  <form action="/rCita" method="POST" class="space-y-4">
+    <div>
+      <label for="medico_id" class="block font-medium text-gray-700"
+        >Seleccionar Médico</label
+      >
+      <select
+        id="medico_id"
+        name="medico_id"
+        class="form-select mt-1 block w-full"
+        required
+        style="background-color: #f0f0f0; color: #000000"
+      >
+        <option value="" disabled selected>Seleccione un médico</option>
+        <!-- Aquí se inserta la lista de médicos -->
+        <% doctores.forEach((medico) => { %>
+        <option value="<%= medico.MedicoID %>">
+          <%= medico.nombre %> <%= medico.apellido %>
+        </option>
+        <% }); %>
+      </select>
+    </div>
+    <div>
+      <label for="paciente_id" class="block font-medium text-gray-700"
+        >Seleccionar Paciente</label
+      >
+      <select
+        id="paciente_id"
+        name="paciente_id"
+        class="form-select mt-1 block w-full"
+        style="background-color: #f0f0f0; color: #000000"
+        required
+      >
+        <option value="" disabled selected>Seleccione un paciente</option>
+        <!-- Aquí se inserta la lista de pacientes -->
+        <% pacientes.forEach((paciente) => { %>
+        <option value="<%= paciente.PacienteID %>">
+          <%= paciente.nombre %> <%= paciente.apellido %>
+        </option>
+        <% }); %>
+      </select>
+    </div>
+    <div>
+      <label for="fecha_cita" class="block font-medium text-gray-700"
+        >Fecha de la Cita</label
+      >
+      <input
+        type="datetime-local"
+        id="fecha_cita"
+        name="fecha_cita"
+        class="form-input mt-1 block w-full"
+        required
+      />
+    </div>
+    <div>
+      <label for="motivo" class="block font-medium text-gray-700"
+        >Motivo de la Cita</label
+      >
+      <textarea
+        id="motivo"
+        name="motivo"
+        class="form-textarea mt-1 block w-full"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+    <div>
+      <button
+        type="submit"
+        class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+      >
+        Programar Cita
+      </button>
+    </div>
+  </form>
+</div>

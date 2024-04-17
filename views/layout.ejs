@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>tarea</title>
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <div
+          class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
+        >
+          <span class="font-medium text-gray-600 dark:text-gray-300">JB</span>
+        </div>
+
+        <div
+          class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+        >
+          <button
+            type="button"
+            class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            id="user-menu-button"
+            aria-expanded="false"
+            data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom"
+          >
+            <div
+              class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
+            >
+              <svg
+                class="absolute w-12 h-12 text-gray-400 -left-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+            id="user-dropdown"
+          >
+            <div class="px-4 py-3">
+              <span class="block text-sm text-gray-900 dark:text-white"
+                >Bonnie Green</span
+              >
+              <span
+                class="block text-sm text-gray-500 truncate dark:text-gray-400"
+                >name@flowbite.com</span
+              >
+            </div>
+            <ul class="py-2" aria-labelledby="user-menu-button">
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Settings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Earnings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  >Sign out</a
+                >
+              </li>
+            </ul>
+          </div>
+          <button
+            data-collapse-toggle="navbar-user"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-user"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          id="navbar-user"
+        >
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="/"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                aria-current="page"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="/cursos"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              >
+                cursos
+              </a>
+            </li>
+            <li>
+              <a
+                href="/horario"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >Horario</a
+              >
+            </li>
+            <!-- 
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Pricing</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+            >Contact</a
+          >
+        </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="m-3 sm:m-6 md:m-9 lg:m-12 xl:m-16"><%-body%></div>
+
+    <!-- Main modal  - registra curso-->
+    <div
+      id="crud-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
+          >
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              Nuevo Curso
+            </h3>
+            <button
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+              data-modal-toggle="crud-modal"
+            >
+              <svg
+                class="w-3 h-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <form action="/guardarCurso" method="post" class="p-4 md:p-5">
+            <div class="grid gap-4 mb-4 grid-cols-2">
+              <div class="col-span-2">
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text"
+                >
+                  curso
+                </label>
+                <input
+                  type="text"
+                  name="curso"
+                  id="curso"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Escriba el nombre del curso"
+                  required
+                />
+              </div>
+              <button
+                class="inline-flex items-center justify-center btn whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full"
+                type="submit"
+              >
+                Registrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- termina modal curso  -->
+
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between flex-wrap">
+          <div class="mb-4 md:mb-0 md:mr-4">
+            <div
+              class="relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
+            >
+              <span class="font-medium text-gray-600 dark:text-gray-300"
+                >JB</span
+              >
+            </div>
+            <span class="block text-gray-500 dark:text-gray-400 text-sm mt-2"
+              >© 2023
+              <a href="https://flowbite.com/" class="hover:underline"
+                >Flowbite™</a
+              >. Reservados todos los derechos.</span
+            >
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+            <div>
+              <h2
+                class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              >
+                Recursos
+              </h2>
+              <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-2">
+                  <a href="https://flowbite.com/" class="hover:underline"
+                    >Flowbite</a
+                  >
+                </li>
+                <li>
+                  <a href="https://tailwindcss.com/" class="hover:underline"
+                    >Tailwind CSS</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div
+              class="flex justify-center space-x-5 sm:justify-start sm:col-span-2"
+            >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              >
+                <svg
+                  class="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                >
+                  <!-- Icono de Facebook -->
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+              <!-- Agrega aquí los otros íconos de redes sociales -->
+            </div>
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+      </div>
+    </footer>
+  </body>
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- sweetalert -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/funciones.js"></script>
